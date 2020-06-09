@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+<body>
+<nav class="sidebar sidebar-open" th:fragment="nav-sidebar">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link " href="/"> <i
+                class="oi oi-home"></i> <span>Home</span>
+        </a></li>
+    </ul>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><span class="nav-link active" >Serviços</span></li>
+        <li class="nav-item"><a class="nav-link"
+                                href="/previsoes/pesquisar"> <i class="oi oi-plus"></i> <span>Traçar Rota</span>
+        </a></li>
+        <li class="nav-item"><a class="nav-link"
+                                href="/previsoes/previsao"> <i class="oi oi-spreadsheet"></i>
+            <span>Previsão </span>
+        </a></li>
+    </ul>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><span class="nav-link active" >Fontes</span></li>
+        <li class="nav-item"><a class="nav-link"
+                                href="http://www.accuweather.com"> <i class="oi oi-plus"></i> <span>AccuWeather API</span>
+        </a></li>
+        <li class="nav-item"><a class="nav-link"
+                                href="http://www.github.com/FontesJ/CloudTech"> <i
+                class="oi oi-spreadsheet"></i> <span>Código principal(GitHub)</span>
+        </a></li>
+    </ul>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><span class="nav-link active">Clientes</span></li>
+        <li class="nav-item"><a class="nav-link"
+                                href="/login"> <i class="oi oi-plus"></i> <span>Cadastrar</span>
+        </a></li>
+        <li class="nav-item"><a class="nav-link"
+                                href="/login"> <i class="oi oi-spreadsheet"></i> <span>Login</span>
+        </a></li>
+    </ul>
+</nav>
+</body>
+</html>
