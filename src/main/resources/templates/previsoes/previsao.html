@@ -16,9 +16,9 @@
                     <span>Previsões</span>
                 </li>
             </ul>
-            <a class="btn btn-primary btn-md" href="/previsoes/previsao" role="button">
+            <a class="btn btn-primary btn-md" href="/previsoes/pesquisar" role="button">
                 <span class="oi oi-plus" title="Cadastro" aria-hidden="true"></span>
-                <span>Origem</span>
+                <span>Nova Previsão</span>
             </a>
         </div>
     </nav>
@@ -30,25 +30,26 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Nome</th>
-                    <th>Ação</th>
+                    <th>Cidade</th>
+                    <th>Máxima (°C)</th>
+                    <th>Mínima (°C)</th>
+                    <th>Alerta</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="d : ${previsoes}">
-                    <td th:text="${d.id}">3</td>
-                    <td th:text="${d.nome}">Administração</td>
-                    <td colspan="2">
-                        <a class="btn btn-info btn-sm" href="/departamentos/editar/3" role="button">
-                            <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
-                        </a>
-                        <button id="btn_departamentos/excluir/3" type="button" class="btn btn-danger btn-sm">
-                            <span class="oi oi-circle-x" title="Exclusão desabilitada" aria-hidden="true"></span>
-                        </button>
-                    </td>
+                <tr th:each="d : ${clima}">
+                    <td th:text="${d.id}">ID</td>
+                    <td th:text="${d.cidade}">Cidade</td>
+                    <td th:text="${d.maxima}">Maxima</td>
+                    <td th:text="${d.minima}">Minima</td>
+                    <td th:text="${d.seriedade}">Seriedade</td>
                 </tr>
                 </tbody>
             </table>
+            <div style="margin-top:50px">O melhor percurso é o Sistema Anchieta-Imigrantes, passando por
+                São Bernardo do Campo e Cubatão. O melhor ponto de parada é na cidade de São Bernardo do Campo.
+                Não há previsão de chuva e o clima estará ameno.
+            </div>
         </div>
     </div>
 

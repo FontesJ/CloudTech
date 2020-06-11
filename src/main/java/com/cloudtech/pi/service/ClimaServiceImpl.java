@@ -1,6 +1,5 @@
 package com.cloudtech.pi.service;
 
-
 import com.cloudtech.pi.dao.ClimaDAO;
 import com.cloudtech.pi.domain.Previsao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +15,13 @@ public class ClimaServiceImpl implements ClimaService {
     private ClimaDAO dao;
 
     @Override @Transactional(readOnly= false)
-    public void salvar(Previsao clima) {
-        dao.save(clima);
+    public void salvar(Previsao previsao) {
+        dao.save(previsao);
     }
 
     @Override @Transactional(readOnly= true)
-    public void editar(Previsao clima) {
-        dao.update(clima);
+    public void editar(Previsao previsao) {
+        dao.update(previsao);
     }
 
     @Override @Transactional(readOnly= true)

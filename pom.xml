@@ -8,10 +8,10 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.meuSite</groupId>
-	<artifactId>teste</artifactId>
+	<groupId>com.cloudtech</groupId>
+	<artifactId>pi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>teste</name>
+	<name>CloudTech</name>
 	<description>Meu primeiro site com Spring Boot</description>
 
 	<properties>

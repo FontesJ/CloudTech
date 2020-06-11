@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface ClimaService {
 
-    void salvar(Previsao clima);
+    void salvar(Previsao previsao);
 
-    void editar (Previsao clima);
+    void editar (Previsao previsao);
 
     void excluir(Long id);
 

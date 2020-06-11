@@ -15,19 +15,19 @@ public class PrevisaoController {
     private ClimaService service;
 
     @GetMapping("/pesquisar")
-    public String pesquisar(Previsao clima){
-        return "/pesquisar";
+    public String pesquisar(){
+        return "previsoes/pesquisar";
     }
 
     @GetMapping("/previsao")
     public String mostrar(ModelMap model){
         model.addAttribute("clima", service.buscarTodos());
-        return "/previsoes";
+        return "previsoes/prevsao";
     }
 
     @PostMapping("/salvar")
-    public String salvar(Previsao clima){
-        service.salvar(clima);
+    public String salvar(Previsao previsao){
+        service.salvar(previsao);
         return "redirect:previsoes/previsao";
     }
 }

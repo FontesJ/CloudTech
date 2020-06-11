@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface ClimaDAO {
 
-    void save(Previsao clima);
+    void save(Previsao previsao);
 
-    void update(Previsao clima);
+    void update(Previsao previsao);
 
     void delete(Long id);
 

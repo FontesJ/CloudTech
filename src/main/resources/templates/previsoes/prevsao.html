@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt" layout:decorate="~{Layout}"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<section class="layout-content" layout:fragment="corpo">
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <i class="oi oi-caret-right"></i>
+                    <span>Previsões</span>
+                </li>
+            </ul>
+            <a class="btn btn-primary btn-md" href="/previsoes/pesquisar" role="button">
+                <span class="oi oi-plus" title="Cadastro" aria-hidden="true"></span>
+                <span>Nova Previsão</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container" id="listagem">
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-sm">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Cidade</th>
+                    <th>Máxima (°C)</th>
+                    <th>Mínima (°C)</th>
+                    <th>Alerta</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>São Paulo</td>
+                    <td>20</td>
+                    <td>18</td>
+                    <td>4</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>São Bernardo do Campo</td>
+                    <td>26</td>
+                    <td>20</td>
+                    <td>3</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Cubatão</td>
+                    <td>26</td>
+                    <td>21</td>
+                    <td>3</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Santos</td>
+                    <td>26</td>
+                    <td>21</td>
+                    <td>3</td>
+                </tr>
+                </tbody>
+            </table>
+            <div style="width:100%; margin-top:50px">
+                <img style="margin-left:260px" src="/image/ct.jpeg"  width="300px" height="80px">
+            </div>
+            <div style="margin-top:50px; margin-left:80px; margin-right:80px; font-size:20px">O melhor percurso é o Sistema Anchieta-Imigrantes, passando por
+                São Bernardo do Campo e Cubatão. O melhor ponto de parada é na cidade de São Bernardo do Campo.
+                Não há previsão de chuva e o clima estará ameno.
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.cloudtech.pi.api.API;
 
+import com.cloudtech.pi.domain.Previsao;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -30,6 +31,7 @@ public class Headline extends Clima{
         JSONObject jsonObject;
         JSONParser parser = new JSONParser();
         Map hl;
+        Previsao previsao = new Previsao();
 
         try {
             jsonObject = (JSONObject) parser.parse(new FileReader("saida.json"));

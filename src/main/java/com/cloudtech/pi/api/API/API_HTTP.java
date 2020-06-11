@@ -12,9 +12,9 @@ import java.io.IOException;
 
 public class API_HTTP {
 
-    public static void doHttpGet(){
+    public static void doHttpGet(String codigo){
 
-        String url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/348735?apikey=" + Chave.getApiKey();
+        String url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/"+codigo+"?apikey=" + Chave.getApiKey();
 
         CloseableHttpClient client = HttpClients.createDefault();
         HttpGet get = new HttpGet(url);

@@ -5,7 +5,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Map;
@@ -73,59 +72,6 @@ public class DailyForecasts extends Clima{
 
     public void setTemperature(Temperature temperature) {
         this.temperature = temperature;
-    }
-}
-
-class Temperature extends DailyForecasts{
-    public Minimun minimun;
-    public Maximun maximun;
-    public Day day;
-    public Night night;
-    public long  EpochDate;
-    public String Date, Source, Link, MobileLink;
-
-    public Temperature() {
-        //Vazio
-    }
-
-    public static double getCelsius(double F){
-        return (F-32.0)*(5.0/9.0);
-    }
-
-    public void setMinimun(Minimun minimun) {
-        this.minimun = minimun;
-    }
-
-    public void setMaximun(Maximun maximun) {
-        this.maximun = maximun;
-    }
-
-    public void setDay(Day day) {
-        this.day = day;
-    }
-
-    public void setNight(Night night) {
-        this.night = night;
-    }
-}
-
-class Minimun extends DailyForecasts{
-    public double Value;
-    public char Unity;
-    public int UnityType;
-
-    public Minimun(){
-        //Vazio
-    }
-}
-
-class Maximun extends DailyForecasts{
-    public double Value;
-    public char Unity;
-    public int UnityType;
-
-    public Maximun(){
-        //Vazio
     }
 }
 

@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{Layout}" >
 <head>
     <meta charset="UTF-8">
     <title>CloudTech</title>
 </head>
 <body>
-    <h3>Pesquisar</h3>
+
+<section class="layout-content" layout:fragment="corpo">
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <i class="oi oi-caret-right"></i>
+                    <span>Pesquisa</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="list-home" class="row">
+            <div class="col-12" style="display:flex; justify-content:center; align-items:center; flex-direction: column;">
+                <img src="/image/ct.jpeg"  width="600px" height="120px">
+                <h3 style="font-size:30px; margin-top:50px">Nos diga a sua rota</h3>
+                    <table style="width:300px; font-size: 15px; text-align: center; margin-top:50px">
+                        <tr style="width:100%">
+                            <td style="width:50%" >Origem:</td>
+                            <td style="width:50%">São Paulo</td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">Destino:</td>
+                            <td style="width:50%">Santos</td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">Preferência:</td>
+                            <td style="width:50%">Calor</td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">Chuva:</td>
+                            <td style="width:50%">Evitar</td>
+                        </tr>
+                    </table>
+                <a href="/previsoes/previsao" style="margin-top:50px">
+                    <button>Buscar</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 </body>
 </html>
